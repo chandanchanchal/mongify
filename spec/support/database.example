@@ -1,0 +1,26 @@
+sqlite:
+  adapter: sqlite3
+  database: spec/tmp/test.sqlite
+
+mysql:
+  adapter: mysql2
+  database: mongify_test
+  username: root
+  password: passw0rd
+  host: localhost
+  port: 3306
+
+postgresql:
+  adapter: postgresql
+  database: mongify_test
+  encoding: unicode
+  username: root
+  password: passw0rd
+  host: localhost
+  port: 5432
+
+mongo:
+  adapter: mongo
+  database: mongify_test
+  host: localhost
+  port: 27017

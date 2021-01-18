@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+#
+# Mongify converts a sql database to a no_sql_database (by default to mongodb)
+# Visit http://github.com/anlek/mongify for more information.
+#
+# Author: Andrew Kalek
+#
+
+$LOAD_PATH.unshift File.join(
+  File.dirname(File.dirname(File.expand_path(__FILE__))), 'lib'
+)
+require 'mongify/cli'
+
+Mongify.root = Dir.pwd
+
+begin
+  exit Mongify::CLI::Application.new(ARGV).execute!
+rescue Mongify::MongifyError => error
+  $stderr.puts "Error: #{error}"
+  exit Mongify::CLI::Application.execution_error_status
+end
