@@ -16,6 +16,9 @@ Learn more about MongoDB at: http://www.mongodb.org
 == Install
 
   gem install mongify
+  # for gemfile issue run below commands
+  1) yum install mysql-devel
+  2) gem install mysql2
 
 === NOTICE
 
